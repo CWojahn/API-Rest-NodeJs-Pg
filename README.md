@@ -14,7 +14,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Roadmap](#roadmap)
+- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -91,33 +91,45 @@ $ yarn start
 
 #### 6. Configure your Insomnia
 
-##### 6.1 Open your Insomnia
+```
+Open your Insomnia
 
-##### 6.2 Import from the repository folder the file "Insomnia_Workspace"
+Import from the repository folder the file "Insomnia_Workspace"
+```
 
 #### 7. Using
 
 ##### 7. Create an User
 
+```
 In the Body, complete with the user data
+```
 
 #### 8. Login the new User
 
+```
 In the Basic, complete with the username and with the password, send this data then copy the response token
+```
 
 #### 9. Creating a Post
 
+```
 In the Headers, paste the token copied above in the x-access-token.
 In the Body, complete with the post data.
+```
 
 #### 10. Follow and user
 
+```
 In the Headers, paste the token copied above in the x-access-token.
 In the Body, complete with the post data.
+```
 
 #### 11. Show the Feed
 
+```
 In the Headers, paste the token copied above in the x-access-token.
+```
 
 <!-- CONTRIBUTING -->
 
