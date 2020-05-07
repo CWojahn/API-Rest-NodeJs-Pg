@@ -15,6 +15,7 @@ routes.post(
 	celebrate({
 		[Segments.BODY]: Joi.object().keys({
 			name: Joi.string().required(),
+			avatar_url: Joi.string(),
 			email: Joi.string().email().required(),
 			phone: Joi.string().required().max(14),
 		}),
@@ -27,6 +28,7 @@ routes.put(
 	celebrate({
 		[Segments.BODY]: Joi.object().keys({
 			name: Joi.string().required(),
+			avatar_url: Joi.string(),
 			email: Joi.string().email().required(),
 			phone: Joi.string().required().max(14),
 		}),
