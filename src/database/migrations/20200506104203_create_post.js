@@ -1,8 +1,9 @@
 exports.up = function (knex) {
 	return knex.schema.createTable('posts', function (table) {
-		table.string('idpost').primary();
-		table.string('createdby').notNullable();
-		table.date('post_date').notNullable();
+		table.increments('idpost');
+		table.integer('createdby').notNullable();
+		table.date('created_at').notNullable();
+		table.date('updated_at');
 		table.string('description', 50).notNullable();
 		table.string('image_url').notNullable();
 		table
@@ -15,5 +16,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-	knex.schema.dropTable('posts');
+	return knex.schema.dropTable('posts');
 };

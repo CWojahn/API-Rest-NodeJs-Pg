@@ -8,14 +8,14 @@ const authMiddleware = async (request, response, next) => {
 		const payload = await jwt.verify(token);
 
 		const user = await connection('users')
-			.select('name', 'avatar_url')
+			.select('name', 'avatar_url', 'iduser')
 			.where('iduser', payload.iduser)
 			.first();
 
 		if (!user) {
 			return response.sendStatus(401);
 		}
-		request.auth = payload.iduser;
+		request.auth = user;
 		next();
 	} catch (error) {
 		return response.status(401).send(error);
